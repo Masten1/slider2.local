@@ -1,0 +1,41 @@
+entities:
+    Emp_Advertise:
+      table_name: %database.db_prefix%Advertise
+      implements: [ iActive, iWeighted ]
+      primary_key: id
+      fields:
+        name: {type: string, nullable: false, name: Название}
+        image: {type: string_image, nullable: false, name: Изображение}
+        url: {type: string_url, nullable: true, name: Урл}
+
+    Emp_Feedback:
+      table_name: %database.db_prefix%Feedback
+      implements: [ iRecord ]
+      primary_key: id
+      fields:
+        name: {type: string, nullable: false, name: ФИО}
+        phone: {type: string_phone, nullable: false, name: Телефон}
+        email: {type: string_email, nullable: false, name: Е-Мейл}
+        title: {type: string, nullable: false, name: Заголовок}
+        message: {type: textarea, nullable: false, name: Cообщение}
+        status: {type: string_list, nullable: false, default: Новый, name: Статус}
+
+    Emp_Tour:
+      table_name: %database.db_prefix%Tours
+      implements: [ iActive ]
+      primary_key: id
+      fields:
+        name: {type: string, name: Название}
+        nameShort: {type: string, name: Короткое название}
+        image: {type: string_image, listable: false, name: Изображение}
+        descriptionShort: {type: textarea, listable: false, name: Короткий текст}
+        text: {type: textarea, listable: false, name: Полный текст}
+
+    Emp_Gallery:
+      table_name: %database.db_prefix%Gallery
+      implements: [ iActive ]
+      primary_key: id
+      fields:
+        name: {type: string, name: Название}
+        image: {type: string_image, listable: false, name: Изображение}
+        description: {type: textarea, listable: false, name: Описание}

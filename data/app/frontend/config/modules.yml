@@ -1,0 +1,95 @@
+modules:
+  index:
+    path: %path.modules%index/
+    action_class: IndexAction
+    module_class: IndexModule
+    name: Модуль по умолчанию
+    shows:
+      index: index
+      menu: menu
+    access:
+      enable: false
+    smarty:
+      template: %modules.index.path%template/
+      compile: %path.smarty.compile%
+
+  staticpages:
+    path: %path.modules%staticpages/
+    action_class: StaticPagesAction
+    module_class: StaticPagesModule
+    name: Модуль StaticPages
+    shows:
+      index: index
+    params:
+      index:
+        techUrl:  {name: Ссылка на страницу, default: ~}
+    access:
+      enable: false
+    smarty:
+      template: %modules.staticpages.path%template/
+      compile: %path.smarty.compile%
+
+  menu:
+    path: %path.modules%menu/
+    action_class: MenuAction
+    module_class: MenuModule
+    name: Модуль Menu
+    shows:
+      index: index
+    access:
+      enable: false
+    smarty:
+      template: %modules.menu.path%template/
+      compile: %path.smarty.compile%
+
+  feedback:
+    path: %path.modules%feedback/
+    action_class: FeedbackAction
+    module_class: FeedbackModule
+    name: Обратная связь
+    shows:
+      index: index
+    access:
+      enable: false
+    smarty:
+      template: %modules.feedback.path%template/
+      compile: %path.smarty.compile%
+
+  advertise:
+    path: %path.modules%advertise/
+    action_class: AdvertiseAction
+    module_class: AdvertiseModule
+    name: Модуль промоблока
+    shows:
+      index: index
+    access:
+      enable: false
+    smarty:
+      template: %modules.advertise.path%template/
+      compile: %path.smarty.compile%
+
+  search:
+    path: %path.modules%search/
+    action_class: SearchAction
+    module_class: SearchModule
+    name: Поиск
+    pager:
+      show_per_page: 40;
+    shows:
+      index: index
+    access:
+      enable: false
+    smarty:
+      template: %modules.search.path%template/
+      compile: %path.smarty.compile%
+
+  user:
+    path: %path.modules%user/
+    action_class: UserAction
+    module_class: UserModule
+    name: Пользователи
+    shows:
+      index: index
+    smarty:
+      template: %modules.user.path%template/
+      compile: %path.smarty.compile%

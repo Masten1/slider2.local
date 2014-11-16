@@ -1,0 +1,1 @@
+<input type="hidden" name="{$formName}[{$name}]" value="{$field.value}" id="{$formName|regex_replace:"/\]|\[/":""}{$name}" class="{$name}" />

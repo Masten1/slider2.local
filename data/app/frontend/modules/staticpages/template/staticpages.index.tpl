@@ -1,0 +1,5 @@
+<article>
+    {$page->text}
+</article>
+
+

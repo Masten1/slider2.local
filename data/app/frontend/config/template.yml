@@ -1,0 +1,6 @@
+template:  
+  main:
+    source: main.tpl
+
+  index:
+    source: index.tpl
